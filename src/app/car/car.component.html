@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card" >
+        <div class="info">
+            <span (click)="showInfoCard()"><fa-icon [icon]="faInfoCircle"></fa-icon></span>
+        </div>
+        <ul class="list-components-car">
+            <app-car-detail
+            [key] = "'Modelo'" 
+            [value] = "car.model">
+            </app-car-detail>
+            <app-car-detail
+            [key] = "'Marca'" 
+            [value] = "car.brand">
+            </app-car-detail>
+            <app-car-detail
+            [key] = "'Año'" 
+            [value] = "car.year">
+            </app-car-detail>
+            
+            <div class="stock">
+                <app-car-detail
+                [key] = "'Stock'" 
+                [value] = "car.stock"
+                [style.color]= "alertRunningOutStock()">
+               </app-car-detail>
+               <span class="add" (click)="addStock()">
+                   <fa-icon [icon]="faPlusCircle"></fa-icon>
+                </span>
+               <span class="remove" (click)="removeStock()">
+                   <fa-icon [icon]="faMinusCircle"></fa-icon>
+                </span>
+            </div>
+            <!-- <input type="text" #txtColor>
+            <button type="button" (click)="changeColor(txtColor.value)">
+                CambiarColor
+            </button> -->
+        </ul>
+    </div>
+</div>
+
+

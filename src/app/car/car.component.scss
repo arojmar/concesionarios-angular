@@ -1,0 +1,45 @@
+
+.container {
+    
+    .card {
+        margin-bottom: 0.5rem;
+        position: relative;
+        .info {
+            color: blue;
+            position: absolute;
+            font-size: 1.3rem;
+            top: 0rem;
+            right: 0rem;
+        }
+        .info:hover{
+            color: rgb(74, 134, 247);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            .stock {
+                padding-top: 0.3rem;
+                position: relative;
+                .add {
+                    font-size: 1rem;
+                    color: green;
+                    position:absolute;
+                    top: 0.2rem;
+                    right: 5rem;
+                }
+
+                .remove {
+                    font-size: 1rem;
+                    color: rgb(226, 31, 31);
+                    position:absolute;
+                    top: 0.2rem;
+                    right: 3.9rem;
+                }
+                
+            }
+        }
+    }
+}
+

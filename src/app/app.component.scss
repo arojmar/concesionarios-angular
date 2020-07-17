@@ -1,0 +1,33 @@
+.main-container{
+    display: flex;
+    flex-flow: row wrap;
+
+    .card-main {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8rem;
+        background-color: rgba(236, 236, 236, 0.63);
+        box-shadow: 2px 2px 2px #6969696e;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid;
+        border-radius: 0.3rem;
+        width: 10rem;
+        padding: 0.6rem;
+        margin: 0.5rem;
+
+        .button-1 {
+            background-color: rgba(73, 57, 57, 0.644);
+            color: white;
+            padding: 0.3rem;
+            border-radius: 0.2rem;
+            border: 1px solid rgba(87, 102, 109, 0.63);
+            font-size: 0.8rem;
+        }
+        .button-1:hover {
+            background-color: rgba(195, 198, 201, 0.973);;
+            padding: 0.3rem;
+            color: dimgray;
+        }
+    }
+}

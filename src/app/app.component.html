@@ -1,0 +1,16 @@
+<div class="main-container">
+  <ng-container *ngFor="let car of cars">
+    <ng-container *ngIf="car.stock > 0">
+    <div class="card-main" [style.border-color] = "setColorBrand(car)"> 
+      <ng-container *ngIf="car.visible">
+          <app-car 
+          [car] = "car"
+          (infoCar) = "showInfoCar($event)">
+          </app-car>
+        </ng-container>
+        <button class="button-1" (click)="showCar(car)">Show/Hide</button>
+      </div>
+    </ng-container>
+  </ng-container>
+<p></p>
+</div>
