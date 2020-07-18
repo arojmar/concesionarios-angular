@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Formulario de Coches</h1>
+    <form #concesionarioForm=ngForm (ngSubmit)="saveForm()">
+    <div class="row">
+        <div class="field-element">
+            <label>
+                Modelo
+            </label>
+            <input type="text" name="model" #model=ngModel [(model)]="car.model" required>
+        </div>
+        <div class="field-element">
+            <label>
+                Marca
+            </label>
+            <select type="text" name="brand" #brand=ngModel [(brand)]="car.brand">
+                <option *ngFor="let item of brands" [value]="item.id">
+                    {{item.value}}
+                </option>
+        </div>
+        <div class="field-element">
+            <label>
+                Año
+            </label>
+            <input type="date" name="year" #year=ngModel [(year)]="car.year">
+        </div>
+        <div class="field-element">
+            <label>
+                Stock 2
+            </label>
+            <input type="number" name="stock" #stock=ngModel [(stock)]="car.stock">
+        </div>
+    </div>
+    </form>
+</div>
