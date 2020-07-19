@@ -7,15 +7,21 @@ import { CarDetailComponent } from './car/car-detail/car-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarFormComponent } from './car-form/car-form.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarFormReactiveComponent } from './car-form-reactive/car-form-reactive.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CarComponent,
     CarDetailComponent,
-    CarFormComponent
+    CarFormComponent,
+    CarFormReactiveComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [],

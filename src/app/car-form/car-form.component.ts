@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Car, Brand } from 'src/models';
 import { IdValue } from 'src/models/id-value';
 
@@ -13,6 +13,8 @@ export class CarFormComponent implements OnInit {
   @Input() brands: IdValue[]  = [];
   branded = Brand;
 
+  @Output() carSaved = new EventEmitter<Car>(false);
+
   constructor() {
 
   }
@@ -23,6 +25,7 @@ export class CarFormComponent implements OnInit {
 
   saveForm(): void {
     console.table(this.car);
+    this.carSaved.emit(this.car);
   }
 
   loadBrands(): IdValue[] {

@@ -3,31 +3,63 @@
     <form #concesionarioForm=ngForm (ngSubmit)="saveForm()">
     <div class="row">
         <div class="field-element">
-            <label>
-                Modelo
-            </label>
-            <input type="text" name="model" #model=ngModel [(model)]="car.model" required>
+            <div class="label">
+                <label>
+                    Modelo
+                </label>
+            </div>
+            <div class="input-model">
+                <input type="text" name="model" #model=ngModel [(ngModel)]="car.model" required>
+            </div>
         </div>
         <div class="field-element">
-            <label>
-                Marca
-            </label>
-            <select type="text" name="brand" #brand=ngModel [(brand)]="car.brand">
-                <option *ngFor="let item of brands" [value]="item.id">
-                    {{item.value}}
-                </option>
+            <div class="label">
+                <label>
+                    Marca
+                </label>
+            </div>
+            <div class="select-brand">
+                <select type="text" name="brand" #brand=ngModel [(ngModel)]="car.brand" required>
+                    <option *ngFor="let item of brands" [value]="item.id">
+                        {{item.value}}
+                    </option>
+                </select>
+            </div>
         </div>
         <div class="field-element">
-            <label>
-                Año
-            </label>
-            <input type="date" name="year" #year=ngModel [(year)]="car.year">
+            <div class="label">
+                <label>
+                    Año
+                </label>
+            </div>
+            <div class="input-date">
+                <input type="date" name="year" #year=ngModel [(ngModel)]="car.year">
+            </div>
         </div>
         <div class="field-element">
-            <label>
-                Stock 2
-            </label>
-            <input type="number" name="stock" #stock=ngModel [(stock)]="car.stock">
+            <div class="label">    
+                <label>
+                    Stock
+                </label>
+            </div>
+            <div class="input-stock">
+                <input type="number" name="stock" #stock=ngModel [(ngModel)]="car.stock" required>
+            </div>
+        </div>
+        <div class="field-element">
+            <div class="label">    
+                <label>
+                    Visible
+                </label>
+            </div>
+            <div class="input-visible">
+                <input type="checkbox" name="visible" #visible=ngModel [(ngModel)]="car.visible">
+            </div>
+        </div>
+        <div class="row-reverse">
+            <button class="btn primary" type="submit" [disabled]="!concesionarioForm.valid">
+                Guardar
+            </button>
         </div>
     </div>
     </form>

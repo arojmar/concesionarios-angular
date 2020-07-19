@@ -1,10 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Car } from 'src/models';
-import {
-  faPlusCircle,
-  faMinusCircle,
-  faInfoCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { Car, Brand } from 'src/models';
+import { faPlusCircle, faMinusCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-car',
@@ -17,6 +13,7 @@ export class CarComponent implements OnInit {
   faMinusCircle = faMinusCircle;
   color: any;
   @Input() car: Car;
+  brand = Brand;
 
   @Output() infoCar = new EventEmitter<string>(false);
 
