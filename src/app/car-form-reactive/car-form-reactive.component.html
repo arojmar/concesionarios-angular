@@ -1,1 +1,66 @@
-<p>car-form-reactive works!</p>
+<div class="container">
+    <h1>Formulario de Coches</h1>
+    <form [formGroup]="carFormReactive" (ngSubmit)="saveForm(carFormReactive.value)">
+    <div class="row">
+        <div class="field-element">
+            <div class="label">
+                <label>
+                    Modelo
+                </label>
+            </div>
+            <div class="input-model">
+                <input type="text" formControlName="model">
+            </div>
+        </div>
+        <div class="field-element">
+            <div class="label">
+                <label>
+                    Marca
+                </label>
+            </div>
+            <div class="select-brand">
+                <select type="text" formControlName="brand">
+                    <option *ngFor="let item of brands" [value]="item.id">
+                        {{item.value}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="field-element">
+            <div class="label">
+                <label>
+                    Año
+                </label>
+            </div>
+            <div class="input-date">
+                <input type="date" formControlName="year">
+            </div>
+        </div>
+        <div class="field-element">
+            <div class="label">    
+                <label>
+                    Stock
+                </label>
+            </div>
+            <div class="input-stock">
+                <input type="number" formControlName="stock">
+            </div>
+        </div>
+        <div class="field-element">
+            <div class="label">    
+                <label>
+                    Visible
+                </label>
+            </div>
+            <div class="input-visible">
+                <input type="checkbox" formControlName="visible">
+            </div>
+        </div>
+        <div class="row-reverse">
+            <button class="btn primary" type="submit" [disabled]="!carFormReactive.valid">
+                Guardar
+            </button>
+        </div>
+    </div>
+    </form>
+</div>

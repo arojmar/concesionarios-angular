@@ -1,0 +1,110 @@
+.container {
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    border: 2px solid rgb(87, 87, 87);
+    border-radius: 0.5rem;
+    box-sizing: border-box; 
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 5px rgba(88, 88, 88, 0.63);
+    background-color: rgb(238, 247, 187);
+
+    h1 {
+        font-size: 1.75rem;
+        padding: 10px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: -5px;
+    }
+
+    .field-element {
+        padding-bottom: 0.8rem;
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+
+
+        .label {
+            padding-bottom: 0.4rem;
+        }
+
+        .input-model {
+            box-shadow: 10px 1px 3px 0px rgba(88, 88, 88, 0.63);
+            input {
+                width: 100%!important;
+                height: 1.5rem;
+                font-size: 1.2rem;
+                font-family: sans-serif;
+            }
+        }
+        
+        .select-brand {
+            box-shadow: 10px 1px 3px 0px rgba(88, 88, 88, 0.63);
+            select {
+                width: 248px;
+                height: 2rem;
+                cursor: pointer;
+
+                option {
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        .input-date {
+            box-shadow: 10px 1px 3px 0px rgba(88, 88, 88, 0.63);
+            input {
+                width: 243px;
+                height: 1.8rem;
+                cursor: pointer;
+            }
+        }
+        
+        .input-stock {
+            box-shadow: 10px 1px 3px 0px rgba(88, 88, 88, 0.63);
+            input {
+                width: 100%!important;
+                height: 1.8rem;
+                font-size: 1.2rem;
+                font-family: sans-serif;
+                cursor: pointer;
+            }
+        }
+        
+        
+    }
+
+    .row-reverse{
+        margin-top: 1rem;
+        padding-left: 9px;
+        padding-bottom: 1.5rem;
+        .btn {
+            box-shadow: 1px 1px 3px 0px rgba(88, 88, 88, 0.63);
+            padding: 0.5rem;
+            width: 248px;
+            background-color: lightskyblue;
+            font-size: 1rem;
+            border: 1px solid rgb(81, 183, 247);
+            color: rgb(49, 49, 70);
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgb(2, 110, 177);
+                color: rgb(252, 252, 252); 
+            }
+
+            &:disabled{
+                background-color: rgb(150, 151, 151);
+                color: rgb(54, 54, 54);
+                border: 1px solid rgb(167, 168, 168); 
+            }
+        }
+    } 
+}

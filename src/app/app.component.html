@@ -12,5 +12,8 @@
       </div>
     </ng-container>
   </ng-container>
-  <app-car-form (carSaved)="saveCar($event)"></app-car-form>
 </div>
+  <div class="main-container">
+    <app-car-form (carSaved)="saveCar($event)"></app-car-form>
+    <app-car-form-reactive (carSaved)="saveCarReactive($event)"></app-car-form-reactive>
+  </div>

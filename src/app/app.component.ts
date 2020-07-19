@@ -133,4 +133,7 @@ export class AppComponent {
     this.cars.push(car);
   }
 
+  saveCarReactive(car: Car): void {
+    this.cars.push(car);
+  }
 }
